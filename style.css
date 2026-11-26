@@ -17,7 +17,8 @@
 body {
   margin: 0;
   background: var(--bg);
-  color: var(--ink);
+  background: url(https://64.media.tumblr.com/b7192d9e53e93a3142998bd872978b56/6e35a0b7fbde3fa1-14/s400x600/6f4e2d1c437e30e3029089b79fd4cdef222d34b5.gifv)
+    center/cover no-repeat;
   font: 16px/1.55 "Segoe UI", system-ui, sans-serif;
 }
 
@@ -30,6 +31,7 @@ main {
 h1 {
   font: 700 1.7rem/1.25 Georgia, "Times New Roman", serif;
   margin: 0 0 6px;
+  color: #ffffff;
 }
 
 h2 {
@@ -38,7 +40,7 @@ h2 {
 }
 
 .sub {
-  color: var(--mute);
+  color: #ffffff;
   margin: 0 0 22px;
   max-width: 62ch;
 }
@@ -51,11 +53,19 @@ h2 {
 }
 
 .card {
-  background: var(--card);
-  border: 1px solid var(--line);
+  background: rgb(255, 255, 255, 0.50);
+  border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 10px;
   padding: 18px;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 4px 20px rgba(20, 35, 30, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
+
 
 label {
   display: block;
@@ -123,21 +133,30 @@ button {
 .verdict {
   border-radius: 10px;
   padding: 22px 24px;
-  color: #fff;
-  background: var(--moss);
   margin-bottom: 16px;
+
+  background: rgba(235, 242, 236, 0.50);
+  color: var(--ink);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 4px 20px rgba(20, 35, 30, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.25);
 }
 
 .verdict.perhatian {
-  background: var(--wood);
+  background: rgba(138, 106, 47, 0.25);
 }
 
 .verdict.segera {
-  background: var(--rust);
+  background: rgba(168, 69, 46, 0.25);
 }
 
 .verdict.kosong {
-  background: #dbe5de;
+  background: rgba(255, 255, 255, 0.50);
   color: var(--ink);
 }
 
@@ -192,7 +211,7 @@ th {
 
 .note {
   font-size: .88rem;
-  color: var(--mute);
+  color: #ffffff;
   margin-top: 22px;
   max-width: 80ch;
 }
